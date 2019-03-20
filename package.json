@@ -14,7 +14,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "format": "eslint src/**/*.js --fix",
-    "server": "json-server --watch server/db.json --port 3001"
+    "server": "json-server --watch server/db.json --port 8080"
   },
   "eslintConfig": {
     "extends": "react-app"
