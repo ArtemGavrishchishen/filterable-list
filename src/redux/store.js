@@ -5,10 +5,12 @@ import thunk from 'redux-thunk';
 
 import usersReducer from './reducers/usersReducer';
 import filteredReducer from './reducers/filteredReducer';
+import selectedCityReducer from './reducers/selectedCityReducer';
 
 const rootReducer = combineReducers({
   users: usersReducer,
   filtered: filteredReducer,
+  selectedCity: selectedCityReducer,
 });
 const logger = createLogger();
 

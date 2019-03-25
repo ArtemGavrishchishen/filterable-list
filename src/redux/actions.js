@@ -34,6 +34,11 @@ const filterPhone = phone => ({
   payload: phone,
 });
 
+const selectCity = city => ({
+  type: types.SELECTED_CITY,
+  payload: city,
+});
+
 export default {
   fetchRequest,
   fetchSuccess,
@@ -42,4 +47,5 @@ export default {
   filterJob,
   filterEmail,
   filterPhone,
+  selectCity,
 };

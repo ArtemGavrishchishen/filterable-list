@@ -5,6 +5,7 @@ const getFilteredName = state => state.filtered.name;
 const getFilteredJob = state => state.filtered.job;
 const getFilteredEmail = state => state.filtered.email;
 const getFilteredPhone = state => state.filtered.phone;
+const getSelectedCity = state => state.selectedCity;
 
 const getFilteredUsers = createSelector(
   [
@@ -24,11 +25,18 @@ const getFilteredUsers = createSelector(
     ),
 );
 
+const getAllUsersCity = createSelector(
+  [getAllUsers],
+  users => users.map(user => user.city).filter((v, i, a) => a.indexOf(v) === i),
+);
+
 export default {
   getAllUsers,
   getFilteredName,
   getFilteredJob,
   getFilteredEmail,
   getFilteredPhone,
+  getSelectedCity,
   getFilteredUsers,
+  getAllUsersCity,
 };

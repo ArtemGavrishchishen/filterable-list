@@ -7,6 +7,8 @@ const FILTERED_JOB = 'filter/FILTERED_JOB';
 const FILTERED_EMAIL = 'filter/FILTERED_EMAIL';
 const FILTERED_PHONE = 'filter/FILTERED_PHONE';
 
+const SELECTED_CITY = 'select/SELECTED_CITY';
+
 export default {
   FETCH_REQUEST,
   FETCH_SUCCESS,
@@ -15,4 +17,5 @@ export default {
   FILTERED_JOB,
   FILTERED_EMAIL,
   FILTERED_PHONE,
+  SELECTED_CITY,
 };

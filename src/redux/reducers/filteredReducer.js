@@ -1,52 +1,29 @@
-import { combineReducers } from 'redux';
-
 import types from '../actionTypes';
 
-function nameReducer(state = '', { type, payload }) {
+const INITIAL_STATE = {
+  name: '',
+  job: '',
+  email: '',
+  phone: '',
+};
+
+function filteredReducer(state = INITIAL_STATE, { type, payload }) {
   switch (type) {
     case types.FILTERED_NAME:
-      return payload;
+      return { ...state, name: payload };
 
-    default:
-      return state;
-  }
-}
-
-function jobReducer(state = '', { type, payload }) {
-  switch (type) {
     case types.FILTERED_JOB:
-      return payload;
+      return { ...state, job: payload };
 
-    default:
-      return state;
-  }
-}
-
-function emailReducer(state = '', { type, payload }) {
-  switch (type) {
     case types.FILTERED_EMAIL:
-      return payload;
+      return { ...state, email: payload };
 
-    default:
-      return state;
-  }
-}
-
-function phoneReducer(state = '', { type, payload }) {
-  switch (type) {
     case types.FILTERED_PHONE:
-      return payload;
+      return { ...state, phone: payload };
 
     default:
       return state;
   }
 }
-
-const filteredReducer = combineReducers({
-  name: nameReducer,
-  job: jobReducer,
-  email: emailReducer,
-  phone: phoneReducer,
-});
 
 export default filteredReducer;

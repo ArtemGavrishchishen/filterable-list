@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Filter from './Filter/FilterListContainer';
+import SelectCity from './SelectCity/SelectCity';
 import UserList from './UserList/UserListContainer';
 import operations from '../redux/operations';
 
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <SelectCity />
         <Filter />
         <UserList />
       </>
