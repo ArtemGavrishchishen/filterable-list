@@ -6,11 +6,15 @@ export default function paginationReducer(
   { type, payload },
 ) {
   switch (type) {
+    case types.SELECTED_CITY:
+      return 1;
+
     case types.TOGGLE_PREVIOUS_PAGE:
       if (state === 1) {
         return state;
       }
       return state - 1;
+
     case types.TOGGLE_NEXT_PAGE:
       if (state === payload) {
         return state;
