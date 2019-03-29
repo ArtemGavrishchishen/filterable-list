@@ -16,8 +16,8 @@ export default function paginationReducer(
       return state - 1;
 
     case types.TOGGLE_NEXT_PAGE:
-      if (state === payload) {
-        return state;
+      if (state >= payload) {
+        return payload;
       }
       return state + 1;
 
