@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './UserList.module.css';
 
-const List = ({ users = [], qs = true }) => (
+const List = ({ users = [], selectedCity = null }) => (
   <table className={styles.table}>
     <thead>
       <tr>
@@ -10,17 +10,17 @@ const List = ({ users = [], qs = true }) => (
         <th>Job</th>
         <th>Email</th>
         <th>Phone</th>
-        {qs && <th>City</th>}
+        {!selectedCity && <th>City</th>}
       </tr>
     </thead>
-    <tbody>
+    <tbody className={styles.tbody}>
       {users.map(({ id, name, job, email, phone, city }) => (
         <tr key={id}>
           <td>{name}</td>
           <td>{job}</td>
           <td>{email}</td>
           <td>{phone}</td>
-          {qs && <td>{city}</td>}
+          {!selectedCity && <td>{city}</td>}
         </tr>
       ))}
     </tbody>

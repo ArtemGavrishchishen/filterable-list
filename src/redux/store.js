@@ -6,11 +6,13 @@ import thunk from 'redux-thunk';
 import usersReducer from './reducers/usersReducer';
 import filteredReducer from './reducers/filteredReducer';
 import selectedCityReducer from './reducers/selectedCityReducer';
+import currentPageReducer from './reducers/currentPageReducer';
 
 const rootReducer = combineReducers({
   users: usersReducer,
   filtered: filteredReducer,
   selectedCity: selectedCityReducer,
+  currentPage: currentPageReducer,
 });
 const logger = createLogger();
 

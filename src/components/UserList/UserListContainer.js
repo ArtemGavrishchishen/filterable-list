@@ -4,7 +4,8 @@ import UserListView from './UserListView';
 import selectors from '../../redux/selectors';
 
 const mapStateToProps = state => ({
-  users: selectors.getFilteredUsers(state),
+  users: selectors.getUsersPagination(state),
+  selectedCity: selectors.getSelectedCity(state),
 });
 
 export default connect(

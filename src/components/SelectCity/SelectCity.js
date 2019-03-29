@@ -10,13 +10,15 @@ const options = usersCity =>
 
 const SelectCity = props => {
   const { usersCity, selectedCity, onSelectCity } = props;
-  const selected = { value: selectedCity, label: selectedCity };
+  const selected =
+    selectedCity !== null ? { value: selectedCity, label: selectedCity } : null;
   return (
     <Select
       value={selected}
       onChange={city => onSelectCity(city.value)}
       options={options(usersCity)}
       autoFocus
+      placeholder="Select City..."
     />
   );
 };

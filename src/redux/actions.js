@@ -39,6 +39,14 @@ const selectCity = city => ({
   payload: city,
 });
 
+const paginationPrev = () => ({
+  type: types.TOGGLE_PREVIOUS_PAGE,
+});
+const paginationNext = maxPage => ({
+  type: types.TOGGLE_NEXT_PAGE,
+  payload: maxPage,
+});
+
 export default {
   fetchRequest,
   fetchSuccess,
@@ -48,4 +56,6 @@ export default {
   filterEmail,
   filterPhone,
   selectCity,
+  paginationPrev,
+  paginationNext,
 };
