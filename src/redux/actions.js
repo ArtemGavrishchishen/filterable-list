@@ -47,6 +47,26 @@ const paginationNext = maxPage => ({
   payload: maxPage,
 });
 
+const sortedName = () => ({
+  type: types.SORTED_NAME,
+});
+
+const sortedJob = () => ({
+  type: types.SORTED_JOB,
+});
+
+const sortedEmail = () => ({
+  type: types.SORTED_EMAIL,
+});
+
+const sortedPhone = () => ({
+  type: types.SORTED_PHONE,
+});
+
+const sortedCity = () => ({
+  type: types.SORTED_CITY,
+});
+
 export default {
   fetchRequest,
   fetchSuccess,
@@ -58,4 +78,9 @@ export default {
   selectCity,
   paginationPrev,
   paginationNext,
+  sortedName,
+  sortedJob,
+  sortedEmail,
+  sortedPhone,
+  sortedCity,
 };

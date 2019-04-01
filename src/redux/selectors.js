@@ -8,6 +8,11 @@ const getFilteredEmail = state => state.filtered.email;
 const getFilteredPhone = state => state.filtered.phone;
 const getSelectedCity = state => state.selectedCity;
 const getCurrentPage = state => state.currentPage;
+const getSortedName = state => state.sorted.name;
+const getSortedJob = state => state.sorted.job;
+const getSortedEmail = state => state.sorted.email;
+const getSortedPhone = state => state.sorted.phone;
+const getSortedCity = state => state.sorted.city;
 
 const getFilteredUsers = createSelector(
   [
@@ -64,4 +69,9 @@ export default {
   getCurrentPage,
   getMaxPage,
   getUsersPagination,
+  getSortedName,
+  getSortedJob,
+  getSortedEmail,
+  getSortedPhone,
+  getSortedCity,
 };

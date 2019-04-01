@@ -5,12 +5,14 @@ import thunk from 'redux-thunk';
 
 import usersReducer from './reducers/usersReducer';
 import filteredReducer from './reducers/filteredReducer';
+import sortedReducer from './reducers/sortedReducer';
 import selectedCityReducer from './reducers/selectedCityReducer';
 import currentPageReducer from './reducers/currentPageReducer';
 
 const rootReducer = combineReducers({
   users: usersReducer,
   filtered: filteredReducer,
+  sorted: sortedReducer,
   selectedCity: selectedCityReducer,
   currentPage: currentPageReducer,
 });
