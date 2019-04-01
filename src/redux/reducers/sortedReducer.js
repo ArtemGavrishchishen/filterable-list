@@ -8,52 +8,47 @@ const INITIAL_STATE = {
   city: 0,
 };
 
+const getSortedValue = value => {
+  let sortedNumber = 0;
+  if (value === 0) {
+    sortedNumber = 1;
+  }
+  if (value === 1) {
+    sortedNumber = -1;
+  }
+  if (value === -1) {
+    sortedNumber = 0;
+  }
+
+  return sortedNumber;
+};
+
 function sortedReducer(state = INITIAL_STATE, { type }) {
   switch (type) {
-    case types.SORTED_NAME:
-      if (state.name === 0) {
-        return { ...state, name: 1 };
-      }
-      if (state.name === 1) {
-        return { ...state, name: -1 };
-      }
-      return { ...state, name: 0 };
+    case types.SORTED_NAME: {
+      const sortedValue = getSortedValue(state.name);
+      return { ...state, name: sortedValue };
+    }
 
-    case types.SORTED_JOB:
-      if (state.job === 0) {
-        return { ...state, job: 1 };
-      }
-      if (state.job === 1) {
-        return { ...state, job: -1 };
-      }
-      return { ...state, job: 0 };
+    case types.SORTED_JOB: {
+      const sortedValue = getSortedValue(state.job);
+      return { ...state, job: sortedValue };
+    }
 
-    case types.SORTED_EMAIL:
-      if (state.email === 0) {
-        return { ...state, email: 1 };
-      }
-      if (state.email === 1) {
-        return { ...state, email: -1 };
-      }
-      return { ...state, email: 0 };
+    case types.SORTED_EMAIL: {
+      const sortedValue = getSortedValue(state.email);
+      return { ...state, email: sortedValue };
+    }
 
-    case types.SORTED_PHONE:
-      if (state.phone === 0) {
-        return { ...state, phone: 1 };
-      }
-      if (state.phone === 1) {
-        return { ...state, phone: -1 };
-      }
-      return { ...state, phone: 0 };
+    case types.SORTED_PHONE: {
+      const sortedValue = getSortedValue(state.phone);
+      return { ...state, phone: sortedValue };
+    }
 
-    case types.SORTED_CITY:
-      if (state.city === 0) {
-        return { ...state, city: 1 };
-      }
-      if (state.city === 1) {
-        return { ...state, city: -1 };
-      }
-      return { ...state, city: 0 };
+    case types.SORTED_CITY: {
+      const sortedValue = getSortedValue(state.city);
+      return { ...state, city: sortedValue };
+    }
 
     default:
       return state;
