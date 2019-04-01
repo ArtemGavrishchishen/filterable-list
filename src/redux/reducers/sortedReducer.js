@@ -16,9 +16,6 @@ const getSortedValue = value => {
   if (value === 1) {
     sortedNumber = -1;
   }
-  if (value === -1) {
-    sortedNumber = 0;
-  }
 
   return sortedNumber;
 };
