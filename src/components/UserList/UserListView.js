@@ -20,7 +20,7 @@ const List = ({
             (sorted.name === 1 && styles.arrowUp) ||
             (sorted.name === -1 && styles.arrowDown)
           }
-          onClick={sortedName}
+          onClick={() => sortedName(sorted.name)}
         >
           Name
         </th>
@@ -29,7 +29,7 @@ const List = ({
             (sorted.job === 1 && styles.arrowUp) ||
             (sorted.job === -1 && styles.arrowDown)
           }
-          onClick={sortedJob}
+          onClick={() => sortedJob(sorted.job)}
         >
           Job
         </th>
@@ -38,7 +38,7 @@ const List = ({
             (sorted.email === 1 && styles.arrowUp) ||
             (sorted.email === -1 && styles.arrowDown)
           }
-          onClick={sortedEmail}
+          onClick={() => sortedEmail(sorted.email)}
         >
           Email
         </th>
@@ -47,7 +47,7 @@ const List = ({
             (sorted.phone === 1 && styles.arrowUp) ||
             (sorted.phone === -1 && styles.arrowDown)
           }
-          onClick={sortedPhone}
+          onClick={() => sortedPhone(sorted.phone)}
         >
           Phone
         </th>
@@ -57,7 +57,7 @@ const List = ({
               (sorted.city === 1 && styles.arrowUp) ||
               (sorted.city === -1 && styles.arrowDown)
             }
-            onClick={sortedCity}
+            onClick={() => sortedCity(sorted.city)}
           >
             City
           </th>

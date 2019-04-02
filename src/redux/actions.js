@@ -47,24 +47,29 @@ const paginationNext = maxPage => ({
   payload: maxPage,
 });
 
-const sortedName = () => ({
+const sortedName = key => ({
   type: types.SORTED_NAME,
+  payload: key,
 });
 
-const sortedJob = () => ({
+const sortedJob = key => ({
   type: types.SORTED_JOB,
+  payload: key,
 });
 
-const sortedEmail = () => ({
+const sortedEmail = key => ({
   type: types.SORTED_EMAIL,
+  payload: key,
 });
 
-const sortedPhone = () => ({
+const sortedPhone = key => ({
   type: types.SORTED_PHONE,
+  payload: key,
 });
 
-const sortedCity = () => ({
+const sortedCity = key => ({
   type: types.SORTED_CITY,
+  payload: key,
 });
 
 export default {

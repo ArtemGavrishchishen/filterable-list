@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 
 const getSortedValue = value => {
   let sortedNumber = 0;
-  if (value === 0) {
+  if (value === 0 || value === -1) {
     sortedNumber = 1;
   }
   if (value === 1) {
